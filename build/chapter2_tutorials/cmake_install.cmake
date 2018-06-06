@@ -33,6 +33,10 @@ if(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/chapter2_tutorials/msg" TYPE FILE FILES "/home/max/catkin_ws/src/chapter2_tutorials/msg/chapter2_msg1.msg")
+endif()
+
+if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/max/catkin_ws/build/chapter2_tutorials/catkin_generated/installspace/chapter2_tutorials.pc")
 endif()
 
