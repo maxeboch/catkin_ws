@@ -283,6 +283,19 @@ gtest_main/fast:
 .PHONY : gtest_main/fast
 
 #=============================================================================
+# Target rules for targets named example3_a
+
+# Build rule for target.
+example3_a: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 example3_a
+.PHONY : example3_a
+
+# fast build rule for target.
+example3_a/fast:
+	$(MAKE) -f chapter2_tutorials/CMakeFiles/example3_a.dir/build.make chapter2_tutorials/CMakeFiles/example3_a.dir/build
+.PHONY : example3_a/fast
+
+#=============================================================================
 # Target rules for targets named chapter2_tutorials_genpy
 
 # Build rule for target.
@@ -294,6 +307,19 @@ chapter2_tutorials_genpy: cmake_check_build_system
 chapter2_tutorials_genpy/fast:
 	$(MAKE) -f chapter2_tutorials/CMakeFiles/chapter2_tutorials_genpy.dir/build.make chapter2_tutorials/CMakeFiles/chapter2_tutorials_genpy.dir/build
 .PHONY : chapter2_tutorials_genpy/fast
+
+#=============================================================================
+# Target rules for targets named example3_b
+
+# Build rule for target.
+example3_b: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 example3_b
+.PHONY : example3_b
+
+# fast build rule for target.
+example3_b/fast:
+	$(MAKE) -f chapter2_tutorials/CMakeFiles/example3_b.dir/build.make chapter2_tutorials/CMakeFiles/example3_b.dir/build
+.PHONY : example3_b/fast
 
 #=============================================================================
 # Target rules for targets named chapter2_tutorials_generate_messages_py
@@ -720,7 +746,9 @@ help:
 	@echo "... gmock_main"
 	@echo "... gtest"
 	@echo "... gtest_main"
+	@echo "... example3_a"
 	@echo "... chapter2_tutorials_genpy"
+	@echo "... example3_b"
 	@echo "... chapter2_tutorials_generate_messages_py"
 	@echo "... example1_b"
 	@echo "... chapter2_tutorials_gennodejs"

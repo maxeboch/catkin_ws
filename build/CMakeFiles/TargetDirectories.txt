@@ -33,7 +33,9 @@
 /home/max/catkin_ws/build/chapter2_tutorials/CMakeFiles/test.dir
 /home/max/catkin_ws/build/chapter2_tutorials/CMakeFiles/install/local.dir
 /home/max/catkin_ws/build/chapter2_tutorials/CMakeFiles/install/strip.dir
+/home/max/catkin_ws/build/chapter2_tutorials/CMakeFiles/example3_a.dir
 /home/max/catkin_ws/build/chapter2_tutorials/CMakeFiles/chapter2_tutorials_genpy.dir
+/home/max/catkin_ws/build/chapter2_tutorials/CMakeFiles/example3_b.dir
 /home/max/catkin_ws/build/chapter2_tutorials/CMakeFiles/chapter2_tutorials_generate_messages_py.dir
 /home/max/catkin_ws/build/chapter2_tutorials/CMakeFiles/example1_b.dir
 /home/max/catkin_ws/build/chapter2_tutorials/CMakeFiles/chapter2_tutorials_gennodejs.dir

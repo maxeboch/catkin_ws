@@ -166,6 +166,21 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
+chapter2_tutorials/CMakeFiles/example3_a.dir/rule:
+	cd /home/max/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 chapter2_tutorials/CMakeFiles/example3_a.dir/rule
+.PHONY : chapter2_tutorials/CMakeFiles/example3_a.dir/rule
+
+# Convenience name for target.
+example3_a: chapter2_tutorials/CMakeFiles/example3_a.dir/rule
+
+.PHONY : example3_a
+
+# fast build rule for target.
+example3_a/fast:
+	cd /home/max/catkin_ws/build && $(MAKE) -f chapter2_tutorials/CMakeFiles/example3_a.dir/build.make chapter2_tutorials/CMakeFiles/example3_a.dir/build
+.PHONY : example3_a/fast
+
+# Convenience name for target.
 chapter2_tutorials/CMakeFiles/chapter2_tutorials_genpy.dir/rule:
 	cd /home/max/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 chapter2_tutorials/CMakeFiles/chapter2_tutorials_genpy.dir/rule
 .PHONY : chapter2_tutorials/CMakeFiles/chapter2_tutorials_genpy.dir/rule
@@ -179,6 +194,21 @@ chapter2_tutorials_genpy: chapter2_tutorials/CMakeFiles/chapter2_tutorials_genpy
 chapter2_tutorials_genpy/fast:
 	cd /home/max/catkin_ws/build && $(MAKE) -f chapter2_tutorials/CMakeFiles/chapter2_tutorials_genpy.dir/build.make chapter2_tutorials/CMakeFiles/chapter2_tutorials_genpy.dir/build
 .PHONY : chapter2_tutorials_genpy/fast
+
+# Convenience name for target.
+chapter2_tutorials/CMakeFiles/example3_b.dir/rule:
+	cd /home/max/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 chapter2_tutorials/CMakeFiles/example3_b.dir/rule
+.PHONY : chapter2_tutorials/CMakeFiles/example3_b.dir/rule
+
+# Convenience name for target.
+example3_b: chapter2_tutorials/CMakeFiles/example3_b.dir/rule
+
+.PHONY : example3_b
+
+# fast build rule for target.
+example3_b/fast:
+	cd /home/max/catkin_ws/build && $(MAKE) -f chapter2_tutorials/CMakeFiles/example3_b.dir/build.make chapter2_tutorials/CMakeFiles/example3_b.dir/build
+.PHONY : example3_b/fast
 
 # Convenience name for target.
 chapter2_tutorials/CMakeFiles/chapter2_tutorials_generate_messages_py.dir/rule:
@@ -753,6 +783,60 @@ src/example2_b.cpp.s:
 	cd /home/max/catkin_ws/build && $(MAKE) -f chapter2_tutorials/CMakeFiles/example2_b.dir/build.make chapter2_tutorials/CMakeFiles/example2_b.dir/src/example2_b.cpp.s
 .PHONY : src/example2_b.cpp.s
 
+src/example3_a.o: src/example3_a.cpp.o
+
+.PHONY : src/example3_a.o
+
+# target to build an object file
+src/example3_a.cpp.o:
+	cd /home/max/catkin_ws/build && $(MAKE) -f chapter2_tutorials/CMakeFiles/example3_a.dir/build.make chapter2_tutorials/CMakeFiles/example3_a.dir/src/example3_a.cpp.o
+.PHONY : src/example3_a.cpp.o
+
+src/example3_a.i: src/example3_a.cpp.i
+
+.PHONY : src/example3_a.i
+
+# target to preprocess a source file
+src/example3_a.cpp.i:
+	cd /home/max/catkin_ws/build && $(MAKE) -f chapter2_tutorials/CMakeFiles/example3_a.dir/build.make chapter2_tutorials/CMakeFiles/example3_a.dir/src/example3_a.cpp.i
+.PHONY : src/example3_a.cpp.i
+
+src/example3_a.s: src/example3_a.cpp.s
+
+.PHONY : src/example3_a.s
+
+# target to generate assembly for a file
+src/example3_a.cpp.s:
+	cd /home/max/catkin_ws/build && $(MAKE) -f chapter2_tutorials/CMakeFiles/example3_a.dir/build.make chapter2_tutorials/CMakeFiles/example3_a.dir/src/example3_a.cpp.s
+.PHONY : src/example3_a.cpp.s
+
+src/example3_b.o: src/example3_b.cpp.o
+
+.PHONY : src/example3_b.o
+
+# target to build an object file
+src/example3_b.cpp.o:
+	cd /home/max/catkin_ws/build && $(MAKE) -f chapter2_tutorials/CMakeFiles/example3_b.dir/build.make chapter2_tutorials/CMakeFiles/example3_b.dir/src/example3_b.cpp.o
+.PHONY : src/example3_b.cpp.o
+
+src/example3_b.i: src/example3_b.cpp.i
+
+.PHONY : src/example3_b.i
+
+# target to preprocess a source file
+src/example3_b.cpp.i:
+	cd /home/max/catkin_ws/build && $(MAKE) -f chapter2_tutorials/CMakeFiles/example3_b.dir/build.make chapter2_tutorials/CMakeFiles/example3_b.dir/src/example3_b.cpp.i
+.PHONY : src/example3_b.cpp.i
+
+src/example3_b.s: src/example3_b.cpp.s
+
+.PHONY : src/example3_b.s
+
+# target to generate assembly for a file
+src/example3_b.cpp.s:
+	cd /home/max/catkin_ws/build && $(MAKE) -f chapter2_tutorials/CMakeFiles/example3_b.dir/build.make chapter2_tutorials/CMakeFiles/example3_b.dir/src/example3_b.cpp.s
+.PHONY : src/example3_b.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -764,7 +848,9 @@ help:
 	@echo "... test"
 	@echo "... install/local"
 	@echo "... install/strip"
+	@echo "... example3_a"
 	@echo "... chapter2_tutorials_genpy"
+	@echo "... example3_b"
 	@echo "... chapter2_tutorials_generate_messages_py"
 	@echo "... example1_b"
 	@echo "... chapter2_tutorials_gennodejs"
@@ -810,6 +896,12 @@ help:
 	@echo "... src/example2_b.o"
 	@echo "... src/example2_b.i"
 	@echo "... src/example2_b.s"
+	@echo "... src/example3_a.o"
+	@echo "... src/example3_a.i"
+	@echo "... src/example3_a.s"
+	@echo "... src/example3_b.o"
+	@echo "... src/example3_b.i"
+	@echo "... src/example3_b.s"
 .PHONY : help
 
 
