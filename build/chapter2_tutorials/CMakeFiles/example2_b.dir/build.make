@@ -99,6 +99,7 @@ example2_b_EXTERNAL_OBJECTS =
 /home/max/catkin_ws/devel/lib/chapter2_tutorials/example2_b: /usr/lib/x86_64-linux-gnu/liblog4cxx.so
 /home/max/catkin_ws/devel/lib/chapter2_tutorials/example2_b: /usr/lib/x86_64-linux-gnu/libboost_regex.so
 /home/max/catkin_ws/devel/lib/chapter2_tutorials/example2_b: /opt/ros/kinetic/lib/libxmlrpcpp.so
+/home/max/catkin_ws/devel/lib/chapter2_tutorials/example2_b: /opt/ros/kinetic/lib/libdynamic_reconfigure_config_init_mutex.so
 /home/max/catkin_ws/devel/lib/chapter2_tutorials/example2_b: /opt/ros/kinetic/lib/libroscpp_serialization.so
 /home/max/catkin_ws/devel/lib/chapter2_tutorials/example2_b: /opt/ros/kinetic/lib/librostime.so
 /home/max/catkin_ws/devel/lib/chapter2_tutorials/example2_b: /opt/ros/kinetic/lib/libcpp_common.so

@@ -116,7 +116,7 @@ if(NOT "/home/max/catkin_ws/devel/include " STREQUAL " ")
   endforeach()
 endif()
 
-set(libraries "")
+set(libraries "chapter2_tutorials")
 foreach(library ${libraries})
   # keep build configuration keywords, target names and absolute libraries as-is
   if("${library}" MATCHES "^(debug|optimized|general)$")
@@ -152,7 +152,7 @@ foreach(library ${libraries})
   endif()
 endforeach()
 
-set(chapter2_tutorials_EXPORTED_TARGETS "chapter2_tutorials_generate_messages_cpp;chapter2_tutorials_generate_messages_eus;chapter2_tutorials_generate_messages_lisp;chapter2_tutorials_generate_messages_nodejs;chapter2_tutorials_generate_messages_py")
+set(chapter2_tutorials_EXPORTED_TARGETS "chapter2_tutorials_generate_messages_cpp;chapter2_tutorials_generate_messages_eus;chapter2_tutorials_generate_messages_lisp;chapter2_tutorials_generate_messages_nodejs;chapter2_tutorials_generate_messages_py;chapter2_tutorials_gencfg")
 # create dummy targets for exported code generation targets to make life of users easier
 foreach(t ${chapter2_tutorials_EXPORTED_TARGETS})
   if(NOT TARGET ${t})

@@ -2,7 +2,7 @@
 CATKIN_PACKAGE_PREFIX = ""
 PROJECT_PKG_CONFIG_INCLUDE_DIRS = "/home/max/catkin_ws/install/include".split(';') if "/home/max/catkin_ws/install/include" != "" else []
 PROJECT_CATKIN_DEPENDS = "message_runtime".replace(';', ' ')
-PKG_CONFIG_LIBRARIES_WITH_PREFIX = "".split(';') if "" != "" else []
+PKG_CONFIG_LIBRARIES_WITH_PREFIX = "-lchapter2_tutorials".split(';') if "-lchapter2_tutorials" != "" else []
 PROJECT_NAME = "chapter2_tutorials"
 PROJECT_SPACE_DIR = "/home/max/catkin_ws/install"
 PROJECT_VERSION = "0.0.0"
