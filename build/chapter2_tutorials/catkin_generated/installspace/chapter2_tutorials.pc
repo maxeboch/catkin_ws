@@ -3,6 +3,6 @@ prefix=/home/max/catkin_ws/install
 Name: chapter2_tutorials
 Description: Description of chapter2_tutorials
 Version: 0.0.0
-Cflags: 
-Libs: -L/home/max/catkin_ws/install/lib 
-Requires: 
+Cflags: -I/home/max/catkin_ws/install/include
+Libs: -L/home/max/catkin_ws/install/lib -lchapter2_tutorials
+Requires: message_runtime

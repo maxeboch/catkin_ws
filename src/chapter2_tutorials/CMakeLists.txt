@@ -10,6 +10,8 @@ project(chapter2_tutorials)
 find_package(catkin REQUIRED COMPONENTS
   roscpp
   std_msgs
+  message_generation
+  dynamic_reconfigure
 )
 
 ## System dependencies are found with CMake's conventions
@@ -46,18 +48,16 @@ find_package(catkin REQUIRED COMPONENTS
 ##   * add every package in MSG_DEP_SET to generate_messages(DEPENDENCIES ...)
 
 ## Generate messages in the 'msg' folder
-# add_message_files(
-#   FILES
-#   Message1.msg
-#   Message2.msg
-# )
+ add_message_files(
+   FILES
+   chapter2_msg1.msg
+ )
 
 ## Generate services in the 'srv' folder
-# add_service_files(
-#   FILES
-#   Service1.srv
-#   Service2.srv
-# )
+ add_service_files(
+   FILES
+   chapter2_srv1.srv
+ )
 
 ## Generate actions in the 'action' folder
 # add_action_files(
@@ -67,10 +67,10 @@ find_package(catkin REQUIRED COMPONENTS
 # )
 
 ## Generate added messages and services with any dependencies listed here
-# generate_messages(
-#   DEPENDENCIES
-#   std_msgs
-# )
+ generate_messages(
+   DEPENDENCIES
+   std_msgs
+ )
 
 ################################################
 ## Declare ROS dynamic reconfigure parameters ##
@@ -87,10 +87,10 @@ find_package(catkin REQUIRED COMPONENTS
 ##     and list every .cfg file to be processed
 
 ## Generate dynamic reconfigure parameters in the 'cfg' folder
-# generate_dynamic_reconfigure_options(
-#   cfg/DynReconf1.cfg
+generate_dynamic_reconfigure_options(
+   cfg/chapter2.cfg
 #   cfg/DynReconf2.cfg
-# )
+ )
 
 ###################################
 ## catkin specific configuration ##
@@ -103,8 +103,8 @@ find_package(catkin REQUIRED COMPONENTS
 ## DEPENDS: system dependencies of this project that dependent projects also need
 catkin_package(
 #  INCLUDE_DIRS include
-#  LIBRARIES chapter2_tutorials
-#  CATKIN_DEPENDS roscpp std_msgs
+  LIBRARIES chapter2_tutorials
+  CATKIN_DEPENDS message_runtime
 #  DEPENDS system_lib
 )
 
@@ -127,13 +127,20 @@ include_directories(
 ## Add cmake target dependencies of the library
 ## as an example, code may need to be generated before libraries
 ## either from message generation or dynamic reconfigure
-# add_dependencies(${PROJECT_NAME} ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+
 
 ## Declare a C++ executable
 ## With catkin_make all packages are built within a single CMake context
 ## The recommended prefix ensures that target names across packages don't collide
 add_executable(example1_a src/example1_a.cpp)
 add_executable(example1_b src/example1_b.cpp)
+add_executable(example2_a src/example2_a.cpp)
+add_executable(example2_b src/example2_b.cpp)
+add_executable(example3_a src/example3_a.cpp)
+add_executable(example3_b src/example3_b.cpp)
+add_executable(example4   src/example4.cpp)
+
+
 
 ## Rename C++ executable without prefix
 ## The above recommended prefix causes long target names, the following renames the
@@ -143,15 +150,24 @@ add_executable(example1_b src/example1_b.cpp)
 
 ## Add cmake target dependencies of the executable
 ## same as for the library above
-add_dependencies(example1_a
-chapter2_tutorials_generate_messages_cpp)
+add_dependencies(example1_a chapter2_tutorials_generate_messages_cpp)
+add_dependencies(example1_b chapter2_tutorials_generate_messages_cpp)
+add_dependencies(example2_a chapter2_tutorials_generate_messages_cpp)
+add_dependencies(example2_b chapter2_tutorials_generate_messages_cpp)
+add_dependencies(example3_a chapter2_tutorials_generate_messages_cpp)
+add_dependencies(example3_b chapter2_tutorials_generate_messages_cpp)
+add_dependencies(example4 chapter2_tutorials_gencfg)
 
-add_dependencies(example1_b
-chapter2_tutorials_generate_messages_cpp)
+
 
 ## Specify libraries to link a library or executable target against
 target_link_libraries(example1_a ${catkin_LIBRARIES})
 target_link_libraries(example1_b ${catkin_LIBRARIES})
+target_link_libraries(example2_a ${catkin_LIBRARIES})
+target_link_libraries(example2_b ${catkin_LIBRARIES})
+target_link_libraries(example3_a ${catkin_LIBRARIES})
+target_link_libraries(example3_b ${catkin_LIBRARIES})
+target_link_libraries(example4 ${catkin_LIBRARIES})
 
 #############
 ## Install ##

@@ -91,15 +91,15 @@ endif()
 # flag project as catkin-based to distinguish if a find_package()-ed project is a catkin project
 set(chapter2_tutorials_FOUND_CATKIN_PROJECT TRUE)
 
-if(NOT " " STREQUAL " ")
+if(NOT "/home/max/catkin_ws/devel/include " STREQUAL " ")
   set(chapter2_tutorials_INCLUDE_DIRS "")
-  set(_include_dirs "")
+  set(_include_dirs "/home/max/catkin_ws/devel/include")
   if(NOT " " STREQUAL " ")
     set(_report "Check the issue tracker '' and consider creating a ticket if the problem has not been reported yet.")
   elseif(NOT " " STREQUAL " ")
     set(_report "Check the website '' for information and consider reporting the problem.")
   else()
-    set(_report "Report the problem to the maintainer 'max <max@todo.todo>' and request to fix the problem.")
+    set(_report "Report the problem to the maintainer 'max <max.eboch@magna.com>' and request to fix the problem.")
   endif()
   foreach(idir ${_include_dirs})
     if(IS_ABSOLUTE ${idir} AND IS_DIRECTORY ${idir})
@@ -116,7 +116,7 @@ if(NOT " " STREQUAL " ")
   endforeach()
 endif()
 
-set(libraries "")
+set(libraries "chapter2_tutorials")
 foreach(library ${libraries})
   # keep build configuration keywords, target names and absolute libraries as-is
   if("${library}" MATCHES "^(debug|optimized|general)$")
@@ -129,7 +129,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/max/catkin_ws/devel/lib;/opt/ros/kinetic/lib)
+    foreach(path /home/max/catkin_ws/devel/lib;/home/max/catkin_ws/devel/lib;/opt/ros/kinetic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)
@@ -152,7 +152,7 @@ foreach(library ${libraries})
   endif()
 endforeach()
 
-set(chapter2_tutorials_EXPORTED_TARGETS "")
+set(chapter2_tutorials_EXPORTED_TARGETS "chapter2_tutorials_generate_messages_cpp;chapter2_tutorials_generate_messages_eus;chapter2_tutorials_generate_messages_lisp;chapter2_tutorials_generate_messages_nodejs;chapter2_tutorials_generate_messages_py;chapter2_tutorials_gencfg")
 # create dummy targets for exported code generation targets to make life of users easier
 foreach(t ${chapter2_tutorials_EXPORTED_TARGETS})
   if(NOT TARGET ${t})
@@ -160,7 +160,7 @@ foreach(t ${chapter2_tutorials_EXPORTED_TARGETS})
   endif()
 endforeach()
 
-set(depends "")
+set(depends "message_runtime")
 foreach(depend ${depends})
   string(REPLACE " " ";" depend_list ${depend})
   # the package name of the dependency must be kept in a unique variable so that it is not overwritten in recursive calls
@@ -189,7 +189,7 @@ foreach(depend ${depends})
   list(APPEND chapter2_tutorials_EXPORTED_TARGETS ${${chapter2_tutorials_dep}_EXPORTED_TARGETS})
 endforeach()
 
-set(pkg_cfg_extras "")
+set(pkg_cfg_extras "chapter2_tutorials-msg-extras.cmake")
 foreach(extra ${pkg_cfg_extras})
   if(NOT IS_ABSOLUTE ${extra})
     set(extra ${chapter2_tutorials_DIR}/${extra})
