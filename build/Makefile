@@ -335,6 +335,19 @@ chapter2_tutorials_gennodejs/fast:
 .PHONY : chapter2_tutorials_gennodejs/fast
 
 #=============================================================================
+# Target rules for targets named example2_b
+
+# Build rule for target.
+example2_b: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 example2_b
+.PHONY : example2_b
+
+# fast build rule for target.
+example2_b/fast:
+	$(MAKE) -f chapter2_tutorials/CMakeFiles/example2_b.dir/build.make chapter2_tutorials/CMakeFiles/example2_b.dir/build
+.PHONY : example2_b/fast
+
+#=============================================================================
 # Target rules for targets named chapter2_tutorials_genlisp
 
 # Build rule for target.
@@ -556,6 +569,19 @@ std_msgs_generate_messages_lisp/fast:
 .PHONY : std_msgs_generate_messages_lisp/fast
 
 #=============================================================================
+# Target rules for targets named example2_a
+
+# Build rule for target.
+example2_a: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 example2_a
+.PHONY : example2_a
+
+# fast build rule for target.
+example2_a/fast:
+	$(MAKE) -f chapter2_tutorials/CMakeFiles/example2_a.dir/build.make chapter2_tutorials/CMakeFiles/example2_a.dir/build
+.PHONY : example2_a/fast
+
+#=============================================================================
 # Target rules for targets named roscpp_generate_messages_eus
 
 # Build rule for target.
@@ -698,6 +724,7 @@ help:
 	@echo "... chapter2_tutorials_generate_messages_py"
 	@echo "... example1_b"
 	@echo "... chapter2_tutorials_gennodejs"
+	@echo "... example2_b"
 	@echo "... chapter2_tutorials_genlisp"
 	@echo "... chapter2_tutorials_generate_messages_lisp"
 	@echo "... std_msgs_generate_messages_py"
@@ -715,6 +742,7 @@ help:
 	@echo "... roscpp_generate_messages_lisp"
 	@echo "... std_msgs_generate_messages_eus"
 	@echo "... std_msgs_generate_messages_lisp"
+	@echo "... example2_a"
 	@echo "... roscpp_generate_messages_eus"
 	@echo "... chapter2_tutorials_generate_messages_cpp"
 	@echo "... example1_a"

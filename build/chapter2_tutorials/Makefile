@@ -226,6 +226,21 @@ chapter2_tutorials_gennodejs/fast:
 .PHONY : chapter2_tutorials_gennodejs/fast
 
 # Convenience name for target.
+chapter2_tutorials/CMakeFiles/example2_b.dir/rule:
+	cd /home/max/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 chapter2_tutorials/CMakeFiles/example2_b.dir/rule
+.PHONY : chapter2_tutorials/CMakeFiles/example2_b.dir/rule
+
+# Convenience name for target.
+example2_b: chapter2_tutorials/CMakeFiles/example2_b.dir/rule
+
+.PHONY : example2_b
+
+# fast build rule for target.
+example2_b/fast:
+	cd /home/max/catkin_ws/build && $(MAKE) -f chapter2_tutorials/CMakeFiles/example2_b.dir/build.make chapter2_tutorials/CMakeFiles/example2_b.dir/build
+.PHONY : example2_b/fast
+
+# Convenience name for target.
 chapter2_tutorials/CMakeFiles/chapter2_tutorials_genlisp.dir/rule:
 	cd /home/max/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 chapter2_tutorials/CMakeFiles/chapter2_tutorials_genlisp.dir/rule
 .PHONY : chapter2_tutorials/CMakeFiles/chapter2_tutorials_genlisp.dir/rule
@@ -481,6 +496,21 @@ std_msgs_generate_messages_lisp/fast:
 .PHONY : std_msgs_generate_messages_lisp/fast
 
 # Convenience name for target.
+chapter2_tutorials/CMakeFiles/example2_a.dir/rule:
+	cd /home/max/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 chapter2_tutorials/CMakeFiles/example2_a.dir/rule
+.PHONY : chapter2_tutorials/CMakeFiles/example2_a.dir/rule
+
+# Convenience name for target.
+example2_a: chapter2_tutorials/CMakeFiles/example2_a.dir/rule
+
+.PHONY : example2_a
+
+# fast build rule for target.
+example2_a/fast:
+	cd /home/max/catkin_ws/build && $(MAKE) -f chapter2_tutorials/CMakeFiles/example2_a.dir/build.make chapter2_tutorials/CMakeFiles/example2_a.dir/build
+.PHONY : example2_a/fast
+
+# Convenience name for target.
 chapter2_tutorials/CMakeFiles/roscpp_generate_messages_eus.dir/rule:
 	cd /home/max/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 chapter2_tutorials/CMakeFiles/roscpp_generate_messages_eus.dir/rule
 .PHONY : chapter2_tutorials/CMakeFiles/roscpp_generate_messages_eus.dir/rule
@@ -669,6 +699,60 @@ src/example1_b.cpp.s:
 	cd /home/max/catkin_ws/build && $(MAKE) -f chapter2_tutorials/CMakeFiles/example1_b.dir/build.make chapter2_tutorials/CMakeFiles/example1_b.dir/src/example1_b.cpp.s
 .PHONY : src/example1_b.cpp.s
 
+src/example2_a.o: src/example2_a.cpp.o
+
+.PHONY : src/example2_a.o
+
+# target to build an object file
+src/example2_a.cpp.o:
+	cd /home/max/catkin_ws/build && $(MAKE) -f chapter2_tutorials/CMakeFiles/example2_a.dir/build.make chapter2_tutorials/CMakeFiles/example2_a.dir/src/example2_a.cpp.o
+.PHONY : src/example2_a.cpp.o
+
+src/example2_a.i: src/example2_a.cpp.i
+
+.PHONY : src/example2_a.i
+
+# target to preprocess a source file
+src/example2_a.cpp.i:
+	cd /home/max/catkin_ws/build && $(MAKE) -f chapter2_tutorials/CMakeFiles/example2_a.dir/build.make chapter2_tutorials/CMakeFiles/example2_a.dir/src/example2_a.cpp.i
+.PHONY : src/example2_a.cpp.i
+
+src/example2_a.s: src/example2_a.cpp.s
+
+.PHONY : src/example2_a.s
+
+# target to generate assembly for a file
+src/example2_a.cpp.s:
+	cd /home/max/catkin_ws/build && $(MAKE) -f chapter2_tutorials/CMakeFiles/example2_a.dir/build.make chapter2_tutorials/CMakeFiles/example2_a.dir/src/example2_a.cpp.s
+.PHONY : src/example2_a.cpp.s
+
+src/example2_b.o: src/example2_b.cpp.o
+
+.PHONY : src/example2_b.o
+
+# target to build an object file
+src/example2_b.cpp.o:
+	cd /home/max/catkin_ws/build && $(MAKE) -f chapter2_tutorials/CMakeFiles/example2_b.dir/build.make chapter2_tutorials/CMakeFiles/example2_b.dir/src/example2_b.cpp.o
+.PHONY : src/example2_b.cpp.o
+
+src/example2_b.i: src/example2_b.cpp.i
+
+.PHONY : src/example2_b.i
+
+# target to preprocess a source file
+src/example2_b.cpp.i:
+	cd /home/max/catkin_ws/build && $(MAKE) -f chapter2_tutorials/CMakeFiles/example2_b.dir/build.make chapter2_tutorials/CMakeFiles/example2_b.dir/src/example2_b.cpp.i
+.PHONY : src/example2_b.cpp.i
+
+src/example2_b.s: src/example2_b.cpp.s
+
+.PHONY : src/example2_b.s
+
+# target to generate assembly for a file
+src/example2_b.cpp.s:
+	cd /home/max/catkin_ws/build && $(MAKE) -f chapter2_tutorials/CMakeFiles/example2_b.dir/build.make chapter2_tutorials/CMakeFiles/example2_b.dir/src/example2_b.cpp.s
+.PHONY : src/example2_b.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -684,6 +768,7 @@ help:
 	@echo "... chapter2_tutorials_generate_messages_py"
 	@echo "... example1_b"
 	@echo "... chapter2_tutorials_gennodejs"
+	@echo "... example2_b"
 	@echo "... chapter2_tutorials_genlisp"
 	@echo "... chapter2_tutorials_generate_messages_lisp"
 	@echo "... std_msgs_generate_messages_py"
@@ -702,6 +787,7 @@ help:
 	@echo "... roscpp_generate_messages_lisp"
 	@echo "... std_msgs_generate_messages_eus"
 	@echo "... std_msgs_generate_messages_lisp"
+	@echo "... example2_a"
 	@echo "... roscpp_generate_messages_eus"
 	@echo "... chapter2_tutorials_generate_messages_cpp"
 	@echo "... example1_a"
@@ -718,6 +804,12 @@ help:
 	@echo "... src/example1_b.o"
 	@echo "... src/example1_b.i"
 	@echo "... src/example1_b.s"
+	@echo "... src/example2_a.o"
+	@echo "... src/example2_a.i"
+	@echo "... src/example2_a.s"
+	@echo "... src/example2_b.o"
+	@echo "... src/example2_b.i"
+	@echo "... src/example2_b.s"
 .PHONY : help
 
 
