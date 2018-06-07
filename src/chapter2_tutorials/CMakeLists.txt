@@ -138,7 +138,7 @@ add_executable(example2_a src/example2_a.cpp)
 add_executable(example2_b src/example2_b.cpp)
 add_executable(example3_a src/example3_a.cpp)
 add_executable(example3_b src/example3_b.cpp)
-add_executable(example4   src/example4.cpp)
+add_executable(example4_2 src/example4_2.cpp)
 
 
 
@@ -156,7 +156,7 @@ add_dependencies(example2_a chapter2_tutorials_generate_messages_cpp)
 add_dependencies(example2_b chapter2_tutorials_generate_messages_cpp)
 add_dependencies(example3_a chapter2_tutorials_generate_messages_cpp)
 add_dependencies(example3_b chapter2_tutorials_generate_messages_cpp)
-add_dependencies(example4 chapter2_tutorials_gencfg)
+add_dependencies(example4_2 chapter2_tutorials_gencfg)
 
 
 
@@ -167,7 +167,7 @@ target_link_libraries(example2_a ${catkin_LIBRARIES})
 target_link_libraries(example2_b ${catkin_LIBRARIES})
 target_link_libraries(example3_a ${catkin_LIBRARIES})
 target_link_libraries(example3_b ${catkin_LIBRARIES})
-target_link_libraries(example4 ${catkin_LIBRARIES})
+target_link_libraries(example4_2 ${catkin_LIBRARIES})
 
 #############
 ## Install ##

@@ -111,17 +111,6 @@ install/fast: preinstall/fast
 	/usr/bin/cmake -P cmake_install.cmake
 .PHONY : install/fast
 
-# Special rule for the target test
-test:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
-	/usr/bin/ctest --force-new-ctest-process $(ARGS)
-.PHONY : test
-
-# Special rule for the target test
-test/fast: test
-
-.PHONY : test/fast
-
 # Special rule for the target install/local
 install/local: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
@@ -132,6 +121,17 @@ install/local: preinstall
 install/local/fast: install/local
 
 .PHONY : install/local/fast
+
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
+	/usr/bin/ctest --force-new-ctest-process $(ARGS)
+.PHONY : test
+
+# Special rule for the target test
+test/fast: test
+
+.PHONY : test/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -314,6 +314,21 @@ roscpp_generate_messages_eus: chapter2_tutorials/CMakeFiles/roscpp_generate_mess
 roscpp_generate_messages_eus/fast:
 	cd /home/max/catkin_ws/build && $(MAKE) -f chapter2_tutorials/CMakeFiles/roscpp_generate_messages_eus.dir/build.make chapter2_tutorials/CMakeFiles/roscpp_generate_messages_eus.dir/build
 .PHONY : roscpp_generate_messages_eus/fast
+
+# Convenience name for target.
+chapter2_tutorials/CMakeFiles/chapter2_tutorials_generate_messages_cpp.dir/rule:
+	cd /home/max/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 chapter2_tutorials/CMakeFiles/chapter2_tutorials_generate_messages_cpp.dir/rule
+.PHONY : chapter2_tutorials/CMakeFiles/chapter2_tutorials_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+chapter2_tutorials_generate_messages_cpp: chapter2_tutorials/CMakeFiles/chapter2_tutorials_generate_messages_cpp.dir/rule
+
+.PHONY : chapter2_tutorials_generate_messages_cpp
+
+# fast build rule for target.
+chapter2_tutorials_generate_messages_cpp/fast:
+	cd /home/max/catkin_ws/build && $(MAKE) -f chapter2_tutorials/CMakeFiles/chapter2_tutorials_generate_messages_cpp.dir/build.make chapter2_tutorials/CMakeFiles/chapter2_tutorials_generate_messages_cpp.dir/build
+.PHONY : chapter2_tutorials_generate_messages_cpp/fast
 
 # Convenience name for target.
 chapter2_tutorials/CMakeFiles/example2_a.dir/rule:
@@ -766,34 +781,19 @@ example3_a/fast:
 .PHONY : example3_a/fast
 
 # Convenience name for target.
-chapter2_tutorials/CMakeFiles/chapter2_tutorials_generate_messages_cpp.dir/rule:
-	cd /home/max/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 chapter2_tutorials/CMakeFiles/chapter2_tutorials_generate_messages_cpp.dir/rule
-.PHONY : chapter2_tutorials/CMakeFiles/chapter2_tutorials_generate_messages_cpp.dir/rule
+chapter2_tutorials/CMakeFiles/example4_2.dir/rule:
+	cd /home/max/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 chapter2_tutorials/CMakeFiles/example4_2.dir/rule
+.PHONY : chapter2_tutorials/CMakeFiles/example4_2.dir/rule
 
 # Convenience name for target.
-chapter2_tutorials_generate_messages_cpp: chapter2_tutorials/CMakeFiles/chapter2_tutorials_generate_messages_cpp.dir/rule
+example4_2: chapter2_tutorials/CMakeFiles/example4_2.dir/rule
 
-.PHONY : chapter2_tutorials_generate_messages_cpp
+.PHONY : example4_2
 
 # fast build rule for target.
-chapter2_tutorials_generate_messages_cpp/fast:
-	cd /home/max/catkin_ws/build && $(MAKE) -f chapter2_tutorials/CMakeFiles/chapter2_tutorials_generate_messages_cpp.dir/build.make chapter2_tutorials/CMakeFiles/chapter2_tutorials_generate_messages_cpp.dir/build
-.PHONY : chapter2_tutorials_generate_messages_cpp/fast
-
-# Convenience name for target.
-chapter2_tutorials/CMakeFiles/example4.dir/rule:
-	cd /home/max/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 chapter2_tutorials/CMakeFiles/example4.dir/rule
-.PHONY : chapter2_tutorials/CMakeFiles/example4.dir/rule
-
-# Convenience name for target.
-example4: chapter2_tutorials/CMakeFiles/example4.dir/rule
-
-.PHONY : example4
-
-# fast build rule for target.
-example4/fast:
-	cd /home/max/catkin_ws/build && $(MAKE) -f chapter2_tutorials/CMakeFiles/example4.dir/build.make chapter2_tutorials/CMakeFiles/example4.dir/build
-.PHONY : example4/fast
+example4_2/fast:
+	cd /home/max/catkin_ws/build && $(MAKE) -f chapter2_tutorials/CMakeFiles/example4_2.dir/build.make chapter2_tutorials/CMakeFiles/example4_2.dir/build
+.PHONY : example4_2/fast
 
 src/example1_a.o: src/example1_a.cpp.o
 
@@ -957,32 +957,32 @@ src/example3_b.cpp.s:
 	cd /home/max/catkin_ws/build && $(MAKE) -f chapter2_tutorials/CMakeFiles/example3_b.dir/build.make chapter2_tutorials/CMakeFiles/example3_b.dir/src/example3_b.cpp.s
 .PHONY : src/example3_b.cpp.s
 
-src/example4.o: src/example4.cpp.o
+src/example4_2.o: src/example4_2.cpp.o
 
-.PHONY : src/example4.o
+.PHONY : src/example4_2.o
 
 # target to build an object file
-src/example4.cpp.o:
-	cd /home/max/catkin_ws/build && $(MAKE) -f chapter2_tutorials/CMakeFiles/example4.dir/build.make chapter2_tutorials/CMakeFiles/example4.dir/src/example4.cpp.o
-.PHONY : src/example4.cpp.o
+src/example4_2.cpp.o:
+	cd /home/max/catkin_ws/build && $(MAKE) -f chapter2_tutorials/CMakeFiles/example4_2.dir/build.make chapter2_tutorials/CMakeFiles/example4_2.dir/src/example4_2.cpp.o
+.PHONY : src/example4_2.cpp.o
 
-src/example4.i: src/example4.cpp.i
+src/example4_2.i: src/example4_2.cpp.i
 
-.PHONY : src/example4.i
+.PHONY : src/example4_2.i
 
 # target to preprocess a source file
-src/example4.cpp.i:
-	cd /home/max/catkin_ws/build && $(MAKE) -f chapter2_tutorials/CMakeFiles/example4.dir/build.make chapter2_tutorials/CMakeFiles/example4.dir/src/example4.cpp.i
-.PHONY : src/example4.cpp.i
+src/example4_2.cpp.i:
+	cd /home/max/catkin_ws/build && $(MAKE) -f chapter2_tutorials/CMakeFiles/example4_2.dir/build.make chapter2_tutorials/CMakeFiles/example4_2.dir/src/example4_2.cpp.i
+.PHONY : src/example4_2.cpp.i
 
-src/example4.s: src/example4.cpp.s
+src/example4_2.s: src/example4_2.cpp.s
 
-.PHONY : src/example4.s
+.PHONY : src/example4_2.s
 
 # target to generate assembly for a file
-src/example4.cpp.s:
-	cd /home/max/catkin_ws/build && $(MAKE) -f chapter2_tutorials/CMakeFiles/example4.dir/build.make chapter2_tutorials/CMakeFiles/example4.dir/src/example4.cpp.s
-.PHONY : src/example4.cpp.s
+src/example4_2.cpp.s:
+	cd /home/max/catkin_ws/build && $(MAKE) -f chapter2_tutorials/CMakeFiles/example4_2.dir/build.make chapter2_tutorials/CMakeFiles/example4_2.dir/src/example4_2.cpp.s
+.PHONY : src/example4_2.cpp.s
 
 # Help Target
 help:
@@ -1004,6 +1004,7 @@ help:
 	@echo "... dynamic_reconfigure_generate_messages_cpp"
 	@echo "... list_install_components"
 	@echo "... roscpp_generate_messages_eus"
+	@echo "... chapter2_tutorials_generate_messages_cpp"
 	@echo "... example2_a"
 	@echo "... std_msgs_generate_messages_eus"
 	@echo "... roscpp_generate_messages_lisp"
@@ -1035,10 +1036,9 @@ help:
 	@echo "... chapter2_tutorials_gencfg"
 	@echo "... chapter2_tutorials_generate_messages_nodejs"
 	@echo "... example3_a"
-	@echo "... chapter2_tutorials_generate_messages_cpp"
-	@echo "... example4"
-	@echo "... test"
+	@echo "... example4_2"
 	@echo "... install/local"
+	@echo "... test"
 	@echo "... src/example1_a.o"
 	@echo "... src/example1_a.i"
 	@echo "... src/example1_a.s"
@@ -1057,9 +1057,9 @@ help:
 	@echo "... src/example3_b.o"
 	@echo "... src/example3_b.i"
 	@echo "... src/example3_b.s"
-	@echo "... src/example4.o"
-	@echo "... src/example4.i"
-	@echo "... src/example4.s"
+	@echo "... src/example4_2.o"
+	@echo "... src/example4_2.i"
+	@echo "... src/example4_2.s"
 .PHONY : help
 
 
