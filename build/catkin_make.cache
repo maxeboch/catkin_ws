@@ -1,2 +1,2 @@
-chapter2_tutorials
+chapter2_tutorials:chapter3_tutorials
 -DCATKIN_DEVEL_PREFIX=/home/max/catkin_ws/devel -DCMAKE_INSTALL_PREFIX=/home/max/catkin_ws/install -G Unix Makefiles

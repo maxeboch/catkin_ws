@@ -1,0 +1,2 @@
+
+-G Unix Makefiles -DCATKIN_DEVEL_PREFIX=/home/max/ERPwROS/Effective-Robotics-Programming-with-ROS/B05576_03_Code/chapter3_Code/devel_isolated -DCMAKE_INSTALL_PREFIX=/home/max/ERPwROS/Effective-Robotics-Programming-with-ROS/B05576_03_Code/chapter3_Code/install_isolated
