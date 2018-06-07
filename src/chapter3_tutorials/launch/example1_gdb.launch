@@ -9,4 +9,3 @@
   <node pkg="chapter3_tutorials" type="example1" name="example1"
         output="screen" launch-prefix="xterm -e gdb --args"/>
 </launch>
-
